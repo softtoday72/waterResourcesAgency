@@ -1,9 +1,9 @@
 import os
 import time
-
 import requests
 from bs4 import BeautifulSoup as bs
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 
@@ -56,7 +56,12 @@ pwd = "密碼"
 new_event = True
 Up = 1
 
-browser = webdriver.Chrome(driverPath)
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+# 啟動Headless 無頭
+chrome_options.add_argument('--disable-gpu')
+# 關閉GPU 避免某些系統或是網頁出錯
+browser = webdriver.Chrome(driverPath, options=chrome_options)
 # 固定視窗大小迴避 element not interactable 的 error
 browser.set_window_size(1200, 800)
 browser.get("https://wrafpc.tw/main/index2.php")
@@ -91,3 +96,5 @@ os.makedirs('./%s/' % event, exist_ok=True)
 download()
 print("下載完成")
 print('總共{}張圖片'.format(i-1))
+browser.quit()
+# 把瀏覽器關閉

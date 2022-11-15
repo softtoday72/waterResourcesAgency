@@ -1,8 +1,8 @@
 
 ## 介紹
-<br>
+
 1. 這個爬蟲是使用 Selenium 套件完成
-2. 提供一次性[防汛網站](https://www.wra.gov.tw/)大量圖片下載 
+2. 提供一次性 [防汛網站](https://www.wra.gov.tw/) 大量圖片下載 
 3. 下載的圖片可以依鄉鎮縣市歸納在資料夾，可以依照檔案內的標示指引，調整不同日期的事件
    - new_event = True 時, 預設為下載最新事件
    - new_event = False 時, 可以在隔一行的 up = number 指定回朔多少次事件

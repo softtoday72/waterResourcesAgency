@@ -1,6 +1,6 @@
 
 ## 介紹
-
+![](/img/%E7%88%AC%E8%9F%B2.gif)  
 1. 這個爬蟲是使用 Selenium 套件完成
 2. 提供一次性 [防汛網站](https://www.wra.gov.tw/) 大量圖片下載 
 3. 下載的圖片可以依鄉鎮縣市歸納在資料夾，可以依照檔案內的標示指引，調整不同日期的事件
@@ -33,3 +33,8 @@ pip install selenium == 3.141.0
 ```
 python3 crawler.py
 ```
+## __開發工具__
+
+* beautifulsoup4 == 4.9.1
+* requests == 2.24.0
+* selenium == 3.141.0
